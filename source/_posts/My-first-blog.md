@@ -1,7 +1,9 @@
 ---
 title: My first blog
+categories: Test
 date: 2018-10-17 20:19:38
-tags: Test
+tags: 
+    - Test
 ---
 
 # My First Blog
