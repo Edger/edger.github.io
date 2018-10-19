@@ -1,15 +1,15 @@
 ---
-title: Hello World
-categories: Test
+title: 使用“Jsoup + 正则表达式”抓取应用版本号
+categories: 爬虫
 date: 2018-10-17 15:20:31
 tags: 
-    - Test
+    - Java
+    - Jsoup
+    - 正则表达式
 ---
-Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
+最近，公司有一个项目需要抓取各大应用商店网页上APP的版本号。为实现该需求，使用了“Jsoup + 正则表达式”来抓取版本号。
 
-## Quick Start
-
-### Create a new post
+### Jsoup
 
 ``` bash
 $ hexo new "My New Post"

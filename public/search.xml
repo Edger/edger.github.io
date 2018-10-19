@@ -12,14 +12,16 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2018%2F10%2F17%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+    <title><![CDATA[使用“Jsoup + 正则表达式”抓取应用版本号]]></title>
+    <url>%2F2018%2F10%2F17%2F%E4%BD%BF%E7%94%A8%E2%80%9CJsoup%20%2B%20%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E2%80%9D%E6%8A%93%E5%8F%96%E5%BA%94%E7%94%A8%E7%89%88%E6%9C%AC%E5%8F%B7%2F</url>
+    <content type="text"><![CDATA[最近，公司有一个项目需要抓取各大应用商店网页上APP的版本号。为实现该需求，使用了“Jsoup + 正则表达式”来抓取版本号。 Jsoup1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
       <categories>
-        <category>Test</category>
+        <category>爬虫</category>
       </categories>
       <tags>
-        <tag>Test</tag>
+        <tag>Java</tag>
+        <tag>Jsoup</tag>
+        <tag>正则表达式</tag>
       </tags>
   </entry>
 </search>
