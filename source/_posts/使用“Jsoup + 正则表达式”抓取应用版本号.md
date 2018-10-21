@@ -11,9 +11,8 @@ tags:
 
 ### Jsoup
 
-``` bash
-$ hexo new "My New Post"
-```
+jsoup是一个用于处理HTML的Java库。它提供了一个非常方便的API，可以通过使用DOM，CSS和类似jquery的方法，提取和操作数据。
+
 <!--more-->
 
 More info: [Writing](https://hexo.io/docs/writing.html)
