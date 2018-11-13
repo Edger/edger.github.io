@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Jack&#39;s Blog</title>
+  <title>Edger&#39;s Blog</title>
   
   <subtitle>Programming, Coding, and Tech</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://fox-hunt.github.io/"/>
-  <updated>2018-10-21T03:33:06.265Z</updated>
+  <updated>2018-10-21T03:33:06.000Z</updated>
   <id>https://fox-hunt.github.io/</id>
   
   <author>
-    <name>Jack Lee</name>
+    <name>Edger Lee</name>
     
   </author>
   
@@ -21,7 +21,7 @@
     <link href="https://fox-hunt.github.io/2018/10/17/%E4%BD%BF%E7%94%A8%E2%80%9CJsoup%20+%20%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E2%80%9D%E6%8A%93%E5%8F%96%E5%BA%94%E7%94%A8%E7%89%88%E6%9C%AC%E5%8F%B7/"/>
     <id>https://fox-hunt.github.io/2018/10/17/使用“Jsoup + 正则表达式”抓取应用版本号/</id>
     <published>2018-10-17T07:20:31.000Z</published>
-    <updated>2018-10-21T03:33:06.265Z</updated>
+    <updated>2018-10-21T03:33:06.000Z</updated>
     
     <content type="html"><![CDATA[<p>最近，公司有一个项目需要抓取各大应用商店网页上APP的版本号。为实现该需求，使用了“Jsoup + 正则表达式”来抓取版本号。</p><h3 id="Jsoup"><a href="#Jsoup" class="headerlink" title="Jsoup"></a>Jsoup</h3><p>jsoup是一个用于处理HTML的Java库。它提供了一个非常方便的API，可以通过使用DOM，CSS和类似jquery的方法，提取和操作数据。</p><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a><br><a id="more"></a></p>]]></content>
     
