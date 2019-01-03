@@ -2,7 +2,7 @@
 title: Edger's Blog
 SEOTitle: Edger's Blog | Edger's Blog
 header-img: img/home-bg.jpg
-email: huxpro@gmail.com
+email: 
 description: ""
 keyword: ""
 url: "https://fox-hunt.github.io/"              # your host, for absolute URL
@@ -13,10 +13,10 @@ baseurl: ""                                     # for example, '/blog' if your b
 # SNS settings
 RSS: true
 weibo_username:     2761043145
-zhihu_username:     
+# zhihu_username:     
 github_username:    fox-hunt
 #twitter_username:  
-facebook_username:  
+# facebook_username:  
 
 
 
@@ -25,7 +25,7 @@ facebook_username:
 highlighter: rouge
 permalink: pretty
 paginate: 10
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md"]
 anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
 
 
@@ -52,7 +52,7 @@ kramdown:
 # Duoshuo settings
 duoshuo_username: Edger's Blog
 # Share component is depend on Comment so we can NOT use share only.
-duoshuo_share: true                     # set to false if you want to use Comment without Sharing
+duoshuo_share: false                     # set to false if you want to use Comment without Sharing
 
 
 
