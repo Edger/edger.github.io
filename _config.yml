@@ -16,7 +16,7 @@ RSS: false
 weibo_username:     2761043145
 # zhihu_username:     
 github_username:    fox-hunt
-#twitter_username:  
+# twitter_username:  
 # facebook_username: 
 # linkedin_username:  firstname-lastname-idxxxx
 
@@ -71,8 +71,8 @@ netease_comment: false
 # ba_track_id: [your track id]
 
 # Google Analytics
-ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
-ga_domain: huangxuan.me
+# ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
+# ga_domain: huangxuan.me
 
 
 
