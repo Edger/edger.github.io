@@ -5,7 +5,7 @@ subtitle:   "学习C++时做的一些笔记"
 date:       2019-01-07 17:27:32
 author:     "Edger"
 header-img: "img/post-bg-C++-learnin.jpg"
-catalog:    false
+catalog:    true
 tags:
 
     - C/C++ 
