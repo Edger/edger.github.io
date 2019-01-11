@@ -1,15 +1,14 @@
 ---
 layout:     post
 title:      "C++ 学习笔记"
-subtitle:   ""
+subtitle:   "学习C++时做的一些笔记"
 date:       2019-01-07 17:27:32
 author:     "Edger"
 header-img: "img/post-bg-C++-learnin.jpg"
 catalog:    false
 tags:
 
-    - C/C++
-    
+    - C/C++ 
 ---
 
 # C/C++ 学习笔记
