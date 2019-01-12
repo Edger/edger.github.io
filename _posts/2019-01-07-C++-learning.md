@@ -18,7 +18,7 @@ tags:
 
 详见[【知乎】为什么尽量不要使用using namespace std？](https://www.zhihu.com/question/26911239)
 
-#### 2. #include <> 和 #include "" 的区别
+#### 2. #include <> 和 #include \"\" 的区别
 
 **#include <>** 先去系统目录中找头文件，如果没有在到当前目录下找。所以像标准的头文件 stdio.h、stdlib.h 等用这个方法。
 
