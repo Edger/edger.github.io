@@ -14,7 +14,7 @@ tags:
 
 #### 1. 为什么尽量不要使用 using namespace std ？
 
-主要是为了避免命名冲突，但是不要矫枉过正。
+主要是为了避免命名冲突，但是不宜矫枉过正。
 
 详见[【知乎】为什么尽量不要使用using namespace std？](https://www.zhihu.com/question/26911239)
 
@@ -24,7 +24,7 @@ tags:
 
 **#include \"\"** 首先在当前目录下寻找，如果找不到，再到系统目录中寻找。 这个用于 include 自定义的头文件，让系统优先使用当前目录中定义的。
 
-#### 3. 在 C++ 中 main 函数前面为什么要加上数据类型，比如： int void ?
+#### 3. 在 C++ 中 main 函数前面为什么要加上数据类型，比如：int void ?
 
 **main** 函数的返回值是返回给主调进程，使主调进程得知被调用程序的运行结果。
 
@@ -34,31 +34,31 @@ tags:
 
 所以在编程时，区分程序运行结果并以 int 型返回，是一个良好的编程习惯。
 
-#### 4. # if 0 ... # endif
+#### 4. # if condition ... # endif
 
-**# if 0 ... # endif** 可以用来实现注释，且可以实现嵌套，格式为：
+**# if condition ... # endif** 可以用来实现注释，且可以实现嵌套，格式为：
 
 ```cpp
-# if 0
+# if condition
      code
 # endif 
 ```
 
-**# if 0** 时不执行 **code** 代码， **# if 1** 时执行 **code** 代码。
+当 **condition** 为 0 时不执行 **code** 代码，当 **condition** 为 1 时执行 **code** 代码。
 
-**# if 0 ... # endif** 有助于程序调试，测试时使用 **# if 1** 来执行测试代码，发布时使用 **# if 0** 来屏蔽测试代码。
+**# if condition ... # endif** 有助于程序调试，测试时使用 **# if 1** 来执行测试代码，发布时使用 **# if 0** 来屏蔽测试代码。
 
-**# if** 后可以是任意的条件语句。
+> **condition** 可以是任意的条件语句。
 
-下面的代码如果 **condition** 条件为 **true** 执行 **code1** ，否则执行 **code2**。
+**# if condition ... # endif** 还可以配合 **else** 使用。下面的代码如果 **condition** 为 **true** 执行 **code1** ，否则执行 **code2**。
 
 ```cpp
 # define condition 1
 
 # if condition
-    code1
+     code1
 # else
-    code2
+     code2
 # endif
 ```
 #### 5. 常量和字面量
@@ -79,7 +79,8 @@ extern int a;  //只是声明了有一个变量 a 存在，具体 a 在哪定义
 ```cpp
 void fun1();  //函数声明
 
-void fun1(){  //函数定义
+void fun1()   //函数定义
+{  
     cout << "fun1" << endl;
 }
 ```
