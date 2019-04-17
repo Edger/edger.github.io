@@ -36,11 +36,11 @@ static 表示“**全局**”或者“**静态**”的意思，用来修饰成�
 
 - 优先加载，兼顾优化性能。使用 static 修饰的变量，在内存中只有一个拷贝，可以节省内存；static 可以用来声明静态代码块，静态代码块只会执行一次。JVM 在加载类时会执行静态代码块，所以静态代码块先于主方法执行。如果类中包含多个静态代码块，会按照顺序执行。静态代码块可以优化程序性能。为什么这样说？详见 3.3 小节。
 
-
 ### 3. static 的用法
 
 #### 3.1 静态变量
-```Java
+
+```java
 static String str = "This is a static variable.";
 ```
 被 static 修饰的变量被称作静态变量，静态变量和非静态变量的区别是：
@@ -53,7 +53,7 @@ static 成员变量的初始化顺序按照定义的顺序进行初始化。
 
 #### 3.2 静态方法
 
-```Java
+```java
     public static void printString() {
         System.out.println("This is a static method.");
     }
@@ -81,7 +81,7 @@ static 代码块也叫静态代码块，是在类中独立于类成员的 static
 
 下面举例说明：
 
-```Java
+```java
 class Person {
     private Date birthDate;
 
@@ -99,7 +99,7 @@ class Person {
 
 Person 是一个非常简单的类，其中 `isBornBetween1946And1964( )` 是用来这个人是否是` 1946～1964` 年出生的，而每次 `isBornBetween1946And1964( )` 被调用的时候，都会生成 startDate 和 birthDate 两个对象，造成了空间浪费，如果改成这样效率会更好：
 
-```Java
+```java
 class Person {
     private Date birthDate;
     private static Date startDate, endDate;
@@ -123,8 +123,7 @@ class Person {
 
 ### 4. final static 的作用
 
-
-```Java
+```java
 private static final String TAG = "TAG";
 ```
 
@@ -183,6 +182,21 @@ private static final String TAG = "TAG";
 > 静态代码块
 
 如果需要通过计算来初始化 static 变量，可以声明一个 static 块，static 块仅在该类被加载时执行一次。
+
+```
+
+```
+
+本文参考文章如下：
+
+[java 为什么要设计静态方法？这样设计的目的是什么?](https://www.zhihu.com/question/51258904)
+[java static 关键字理解](https://www.jianshu.com/p/b1259f641d09)
+[Java 修饰符 static 的作用](https://blog.csdn.net/yuxin1100/article/details/51679303)
+[static 静态修饰符](https://www.jianshu.com/p/289d3c1735f0)
+[static修饰符详解](https://blog.csdn.net/u012152619/article/details/46003303)
+[Java 中的 static 关键字解析](https://www.cnblogs.com/dolphin0520/p/3799052.html)
+[Java 中 static 作用及用法详解](https://blog.csdn.net/fengyuzhengfan/article/details/38082999)
+
 
 
 
