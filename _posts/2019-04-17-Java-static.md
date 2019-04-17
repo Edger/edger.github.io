@@ -183,24 +183,17 @@ private static final String TAG = "TAG";
 
 如果需要通过计算来初始化 static 变量，可以声明一个 static 块，static 块仅在该类被加载时执行一次。
 
-```Java
-```
+---
 
 本文参考文章如下：
 
-[java 为什么要设计静态方法？这样设计的目的是什么?](https://www.zhihu.com/question/51258904)
-
-[java static 关键字理解](https://www.jianshu.com/p/b1259f641d09)
-
-[Java 修饰符 static 的作用](https://blog.csdn.net/yuxin1100/article/details/51679303)
-
-[static 静态修饰符](https://www.jianshu.com/p/289d3c1735f0)
-
-[static修饰符详解](https://blog.csdn.net/u012152619/article/details/46003303)
-
-[Java 中的 static 关键字解析](https://www.cnblogs.com/dolphin0520/p/3799052.html)
-
-[Java 中 static 作用及用法详解](https://blog.csdn.net/fengyuzhengfan/article/details/38082999)
+- [java 为什么要设计静态方法？这样设计的目的是什么?](https://www.zhihu.com/question/51258904)
+- [java static 关键字理解](https://www.jianshu.com/p/b1259f641d09)
+- [Java 修饰符 static 的作用](https://blog.csdn.net/yuxin1100/article/details/51679303)
+- [static 静态修饰符](https://www.jianshu.com/p/289d3c1735f0)
+- [static修饰符详解](https://blog.csdn.net/u012152619/article/details/46003303)
+- [Java 中的 static 关键字解析](https://www.cnblogs.com/dolphin0520/p/3799052.html)
+- [Java 中 static 作用及用法详解](https://blog.csdn.net/fengyuzhengfan/article/details/38082999)
 
 
 
