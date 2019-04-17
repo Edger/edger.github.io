@@ -5,7 +5,7 @@ header-img: img/home-bg.jpg
 email: 
 description: ""
 keyword: ""
-url: "https://fox-hunt.github.io/"              # your host, for absolute URL
+url: "https://edger.github.io/"              # your host, for absolute URL
 baseurl: ""                                     # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
@@ -15,7 +15,7 @@ future: true
 RSS: false
 weibo_username:     2761043145
 # zhihu_username:     
-github_username:    fox-hunt
+github_username:    Edger
 # twitter_username:  
 # facebook_username: 
 # linkedin_username:  firstname-lastname-idxxxx
@@ -104,7 +104,7 @@ page-mathjax: false
 friends: [
     {
         title: "Edger's Blog",
-        href: "https://fox-hunt.github.io/"
+        href: "https://edger.github.io/"
     },{
         title: "Foo",
         href: "#"
