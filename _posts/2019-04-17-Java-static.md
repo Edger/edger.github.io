@@ -18,9 +18,9 @@ tags:
 
 ### 1. static 是什么？
 
-static 是静态修饰符。什么又是静态代码符？在程序中，任何变量或者代码都是在编译时由系统自动分配内存来存储的。而所谓静态，就是指在编译后系统所分配的内存会一直存在，直到程序退出内存才会释放这个空间。也就是说，只要程序在运行，那么这块内存就会一直存在。
+`static` 是静态修饰符。什么又是静态代码符？在程序中，任何变量或者代码都是在编译时由系统自动分配内存来存储的。而所谓静态，就是指在编译后系统所分配的内存会一直存在，直到程序退出内存才会释放这个空间。也就是说，只要程序在运行，那么这块内存就会一直存在。
 
-这样做有什么意义呢？在 Java 程序里面，所有的东西都是对象，而对象的抽象就是类。对于一个类而言，如果要使用它的成员，那么普通情况下必须先实例化对象后，通过对象的引用才能够访问这些成员，但是用 static 修饰的成员可以通过 “类名.成员” 的方式进行直接访问（这里不考虑类的访问控制）。
+这样做有什么意义呢？在 Java 程序里面，所有的东西都是对象，而对象的抽象就是类。对于一个类而言，如果要使用它的成员，那么普通情况下必须先实例化对象后，通过对象的引用才能够访问这些成员，但是用 static 修饰的成员可以通过 “`类名.成员`” 的方式进行直接访问（这里不考虑类的访问控制）。
 
 static 表示“**全局**”或者“**静态**”的意思，用来修饰成员变量和成员方法，也可以用来形成静态 static 代码块。但是需要明白的是， Java 语言中是没有全局变量这个概念的。
 
@@ -97,7 +97,7 @@ class Person {
 }
 ```
 
-Person 是一个非常简单的类，其中 `isBornBetween1946And1964( )` 是用来这个人是否是` 1946～1964` 年出生的，而每次 `isBornBetween1946And1964( )` 被调用的时候，都会生成 startDate 和 birthDate 两个对象，造成了空间浪费，如果改成这样效率会更好：
+Person 是一个非常简单的类，其中 `isBornBetween1946And1964( )` 是用来这个人是否是` 1946～1964` 年出生的，而每次 `isBornBetween1946And1964( )` 被调用的时候，都会生成 `startDate` 和 `birthDate` 两个对象，造成了空间浪费，如果改成这样效率会更好：
 
 ```java
 class Person {
@@ -129,9 +129,9 @@ private static final String TAG = "TAG";
 
 `static final` 用来修饰成员变量和成员方法，可简单理解为 Java 中的“全局常量”。
 
-对于变量，使用 static final 修饰后，表示一旦给值就不可修改，并且通过类名可以访问。
+对于变量，使用 `static final` 修饰后，表示一旦给值就不可修改，并且通过类名可以访问。
 
-对于方法，使用 static final 修饰后，则表示不可覆盖，并且可以通过类名直接访问。
+对于方法，使用 `static final` 修饰后，则表示不可覆盖，并且可以通过类名直接访问。
 
 对于被 static 和 final 修饰过的实例常量，实例本身不能再改变了。但对于一些容器类型（比如，ArrayList、HashMap）的实例变量，不可以改变的只是容器变量本身，但可以修改容器中存放的对象，这一点在编程中用到很多。
 
@@ -145,7 +145,7 @@ private static final String TAG = "TAG";
 
 ![](/img/in-post/post-Java-static-access-right.png)
 
-打印 Person.age 时提示错误"Person.age is not visible."，但是打印 Person.name 则不会，这说明 static 关键字并不会改变变量和方法的访问权限。
+打印 Person.age 时提示错误 "Person.age is not visible."，但是打印 Person.name 则不会，这说明 static 关键字并不会改变变量和方法的访问权限。
 
 #### 5.2 能通过 this 访问静态成员变量吗？
 
@@ -155,9 +155,9 @@ private static final String TAG = "TAG";
 
 #### 5.3 static 能作用于局部变量么？
 
-在C/C++中static是可以作用域局部变量的，但是在Java中切记：static是不允许用来修饰局部变量。不要问为什么，这是Java语法的规定。
+在 C/C++ 中 static 是可以作用域局部变量的，但是在 Java 中切记：static 是不允许用来修饰局部变量。不要问为什么，这是 Java 语法的规定。
 
-具体原因可以参考这篇博文的讨论：[Java static关键字为什么不能应用于局部变量？](http://www.debugease.com/j2se/178932.html)
+具体原因可以参考这篇博文的讨论：[Java static 关键字为什么不能应用于局部变量？](http://www.debugease.com/j2se/178932.html)
 
 ### 6. 总结
 
@@ -169,7 +169,7 @@ private static final String TAG = "TAG";
 
 > 静态方法
 
-静态方法最常见的例子是 main( )。因为在程序开始执行时必须调用 main( )，所以它需要被声明为 static 。
+静态方法最常见的例子是` main( )`。因为在程序开始执行时必须调用` main( )`，所以它需要被声明为 static 。
 
 声明为 static 的方法有以下几条限制：
 
@@ -183,8 +183,7 @@ private static final String TAG = "TAG";
 
 如果需要通过计算来初始化 static 变量，可以声明一个 static 块，static 块仅在该类被加载时执行一次。
 
-```
------ 分割线 -----
+```Java
 ```
 
 本文参考文章如下：
