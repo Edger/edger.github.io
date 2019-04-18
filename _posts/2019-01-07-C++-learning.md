@@ -14,7 +14,7 @@ tags:
 
 #### 1. 为什么尽量不要使用 using namespace std ？
 
-主要是为了避免命名冲突，但是不宜矫枉过正。
+主要是为了避免命名冲突，但是不宜因噎废食。
 
 详见[【知乎】为什么尽量不要使用using namespace std？](https://www.zhihu.com/question/26911239)
 
