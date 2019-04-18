@@ -78,7 +78,7 @@ netease_comment: false
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "...more, and more, and more..."
+sidebar-about-description: "其犹龙乎，卜他年鲤化蛟腾，尽洗蛮烟蜑雨。"
 sidebar-avatar: /img/avatar.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
@@ -103,19 +103,31 @@ page-mathjax: false
 # Friends
 friends: [
     {
-        title: "Edger's Blog",
-        href: "https://edger.github.io/"
+        title: "Hux Blog",
+        href: "http://huangxuan.me/"
     },{
-        title: "Foo",
-        href: "#"
+        title: "码志",
+        href: "https://mazhuang.org/"
     },{
-        title: "Bar",
-        href: "#"
+        title: "贾鹏辉的技术博客官网",
+        href: "http://www.devio.org/"
     },{
-        title: "Example Friends",
-        href: "#"
+        title: "Gityuan",
+        href: "http://gityuan.com/"
     },{
-        title: "It helps SEO",
-        href: "#"
+        title: "阮一峰的网络日志",
+        href: "http://www.ruanyifeng.com/blog/"
+    },{
+        title: "酷壳",
+        href: "https://coolshell.cn/"
+    },{
+        title: "Weishu's Notes",
+        href: "http://weishu.me/"
+    },{
+        title: "干货集中营",
+        href: "https://gank.io/"
+    },{
+        title: "Tick-tick",
+        href: "https://www.liutf.com/"
     }
 ]
