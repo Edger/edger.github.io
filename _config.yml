@@ -106,26 +106,29 @@ friends: [
         title: "Hux Blog",
         href: "http://huangxuan.me/"
     },{
-        title: "码志",
-        href: "https://mazhuang.org/"
-    },{
-        title: "贾鹏辉的技术博客官网",
-        href: "http://www.devio.org/"
-    },{
         title: "Gityuan",
         href: "http://gityuan.com/"
     },{
-        title: "阮一峰的网络日志",
-        href: "http://www.ruanyifeng.com/blog/"
+        title: "码志",
+        href: "https://mazhuang.org/"
+    },{
+        title: "独立",
+        href: "https://josephchang10.github.io"
     },{
         title: "酷壳",
         href: "https://coolshell.cn/"
     },{
-        title: "Weishu's Notes",
-        href: "http://weishu.me/"
-    },{
         title: "干货集中营",
         href: "https://gank.io/"
+    },{
+        title: "阮一峰的网络日志",
+        href: "http://www.ruanyifeng.com/blog/"
+    },{
+        title: "贾鹏辉的技术博客官网",
+        href: "http://www.devio.org/"
+    },{
+        title: "Weishu's Notes",
+        href: "http://weishu.me/"
     },{
         title: "Tick-tick",
         href: "https://www.liutf.com/"
