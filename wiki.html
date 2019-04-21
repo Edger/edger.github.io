@@ -1,0 +1,33 @@
+---
+title: Wiki
+layout: default
+description: 好记性不如烂笔头
+header-img: "img/tag-bg.jpg"
+---
+
+<!-- Page Header -->
+{% include intro-header.html type='page' short=true %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="mini-post-list">
+                {% for wiki in site.wiki reversed %}
+                <div class="post-preview item">
+                    <a href="{{ wiki.url | prepend: site.baseurl }}">
+                        <h2 class="post-title">
+                            {{ wiki.title }}
+                        </h2>
+                        {% if wiki.subtitle %}
+                        <h3 class="post-subtitle">
+                            {{ wiki.subtitle }}
+                        </h3>
+                        {% endif %}
+                    </a>
+                    <hr>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

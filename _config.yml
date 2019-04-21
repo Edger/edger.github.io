@@ -56,7 +56,11 @@ kramdown:
       line_numbers: true
       start_line: 1
 
-
+# Add wiki page
+collections:
+    wiki:
+        output: true
+        permalink: /wiki/:path/
 
 # Disqus settings
 # disqus_username: _your_disqus_short_name_
@@ -85,7 +89,7 @@ sidebar-avatar: /img/avatar.jpg      # use absolute URL, seeing it's used in bot
 
 # Featured Tags
 featured-tags: true                     # whether or not using Feature-Tags
-featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+featured-condition-size: 0              # A tag will be featured if the size of it is more than this condition value
 
 
 
