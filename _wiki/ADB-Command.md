@@ -14,87 +14,164 @@ tags:
 
 #### ADB Root 步骤
 
-打开ROOT工具，选中盘符后发送SC_SWITCH_ROOT
+打开ROOT工具，选中盘符后发送 `SC_SWITCH_ROOT`
 
-> **adb root**
+```shell
 
-> **adb shell setprop persist.fih.verity_disable 1**
+adb root
 
-> **adb disable-verity**
+adb shell setprop persist.fih.verity_disable 1
 
+adb disable-verity
+
+```
 
 重启
 
->**adb reboot**
+```shell
+
+adb reboot
+
+```
 
 开机后再次选中盘符后发送 SC_SWITCH_ROOT
 
-> **adb root**
-> **adb remount**
+
+```shell
+
+adb root
+
+adb remount
+
+```
 
 #### 获得当前活动窗口的信息，包名以及活动窗体：
 
-> **adb shell dumpsys window windows \| grep mCurrent**
+```shell
+
+adb shell dumpsys window windows | grep mCurrent**
+
+```
 
 #### 杀死进程
 
-> **adb shell kill [PID]** 
+```shell
+
+adb shell kill [PID]
+
+```
 
 或
 
-> **am force-stop \<package_name\>**
+
+```shell
+
+am force-stop <package_name>
+
+```
 
 #### 查看所有进程列表，Process Status
 
-> **adb shell ps**      
+```shell
+
+adb shell ps
+
+```    
 
 #### 查看package_name程序进程
 
-> **adb shell ps \| grep \<package_name\>**    
+```
+
+adb shell ps | grep <package_name>
+
+```
 
 #### 查看PID进程状态
 
-> **adb shell ps -x [PID]**      
+```shell
+
+adb shell ps -x [PID]
+
+```     
 
 #### 实时监听程序进程的变化
 
-> **adb shell top \| grep \<package_name\>** 
+```shell
+
+adb shell top | grep <package_name>
 
 ```
+
+运行结果如下：
+
+```
+
 eg:
 adb shell ps -x 13699
 USER           PID    PPID    VSIZE     RSS     WCHAN      PC               NAME
 u0_a94    13699 1734  1653292 28404   ffffffff    00000000 S com.polysaas.mdm (u:6, s:6)
+
 ```
 
 #### 包名管理命令，获得对应包名的对应apk路径：
 
-> **adb shell pm  path com.android.settings**
+```shell
+
+adb shell pm  path com.android.settings
+
+```
 
 #### adb shell 查看当前进程和窗口信息可以使用如下命令：
 
-> **adb shell dumpsys window windows \| grep "Window #"**
+```shell
+
+adb shell dumpsys window windows | grep "Window #"
+
+```
 
 #### 获取当前activity：
 
 方法一：
 
-> **adb shell logcat \| grep ActivityManager**
+
+```shell
+
+adb shell logcat | grep ActivityManager
+
+```
 
 方法二：
 
-> **adb shell dumpsys activity activities**
+```shell
+
+adb shell dumpsys activity activities
+
+```
 
 #### 查看当前与用户交互的activity
 
 方法一：
 
-> **adb shell dumpsys activity activities \| sed -En -e '/Running activities/,/Run #0/p'**
+
+```shell
+
+adb shell dumpsys activity activities | sed -En -e '/Running activities/,/Run #0/p'
+
+```
 
 方法二：
 
-> **adb shell dumpsys activity \| grep -i run**
+```shell
+
+adb shell dumpsys activity | grep -i run
+
+```
 
 方法三：
 
-> **adb shell dumpsys activity \| grep "mFoc"**
+
+```shell
+
+adb shell dumpsys activity | grep "mFoc"
+
+```
