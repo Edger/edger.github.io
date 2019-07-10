@@ -2,19 +2,17 @@
 title:      "理解 Android 编译命令"
 subtitle:   "Android 编译系统常用命令"
 date:       2016-03-19 21:19:12
-author:     "Gityuan"
 header-img: "img/post-bg-C++-learnin.jpg"
 catalog:    true
 tags:
+
     - android
     - tool
-
 ---
 
-## 注：本文转自 Gityuan 的博客 [理解 Android 编译命令](http://gityuan.com/2016/03/19/android-build/)。
+### 注：本文转自 Gityuan 的博客 [理解 Android 编译命令](http://gityuan.com/2016/03/19/android-build/)。
 
 > 工欲善其事，必先利其器，对于想要深入学习 Android 源码，必须先掌握 Android 编译命令。
-
 
 ## 一、引言
 
