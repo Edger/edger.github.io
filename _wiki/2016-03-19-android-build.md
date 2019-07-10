@@ -19,9 +19,9 @@ tags:
 
 关于 Android Build 系统，这个话题很早就打算整理下，迟迟没有下笔，决定跟大家分享下。先看下面几条指令，相信编译过 Android 源码的人都再熟悉不过的。
 ```shell
-    source setenv.sh
-    lunch
-    make -j12
+source setenv.sh
+lunch
+make -j12
 ```
 记得最初刚接触 Android 时，同事告诉我用上面的指令就可以编译 Android 源码，指令虽短但过几天就记不全或者忘记顺序，每次编译时还需要看看自己的云笔记，冰冷的指令总是难以让我记忆。后来我决定认真研究下这个指令的含义。知其然还需知其所以然，这样能更深层次的理解并记忆，才能与自身的知识体系建立强连接，或许还有意外收获，果然如此，接下来跟大家分享一下在研究上述几条指令含义的过程中，深入了解到的 Android Build(编译) 系统。
 
@@ -31,19 +31,19 @@ tags:
 
 接下来，解释一下本文开头的引用的命令：
 ```shell
-    source setenv.sh // 初始化编译环境，包括后面的 lunch 和 make 指令
-    lunch // 指定此次编译的目标设备以及编译类型
-    make  -j12 // 开始编译，默认为编译整个系统，其中 - j12 代表的是编译的 job 数量为 12。
+source setenv.sh // 初始化编译环境，包括后面的 lunch 和 make 指令
+lunch // 指定此次编译的目标设备以及编译类型
+make  -j12 // 开始编译，默认为编译整个系统，其中 - j12 代表的是编译的 job 数量为 12。
 ```
 所有的编译命令都在 `envsetup.sh` 文件能找到相对应的 function，比如上述的命令 `lunch`，`make`，在文件一定能找到
 ```shell
-    function lunch(){
-        ...
-    }
+function lunch(){
+    ...
+}
 
-    function make(){
-        ...
-    }
+function make(){
+    ...
+}
 ```
 `source envsetup.sh`，需要 cd 到 setenv.sh 文件所在路径执行，路径可能在 build/envsetup.sh，或者 integrate/envsetup.sh，再或者不排除有些厂商会封装自己的 .sh 脚本，但核心思路是一致的。
 
@@ -99,19 +99,19 @@ tags:
 
 上述指令用法最终实现方式都是基于 `grep` 指令，各个指令用法格式：
 ```shell
-    xgrep [keyword]  //x 代表的是上表的搜索指令
+xgrep [keyword]  //x 代表的是上表的搜索指令
 ```
 例如，搜索所有 AndroidManifest.xml 文件中的 `launcher` 关键字所在文件的具体位置，指令
 ```shell
-    mangrep launcher
+mangrep launcher
 ```
 再如，搜索所有 Java 代码中包含 zygote 所在文件
 ```shell
-    jgrep zygote
+jgrep zygote
 ```
 又如，搜索所有 system_app 的 selinux 权限信息
 ```shell
-    sepgrep system_app
+sepgrep system_app
 ```
 **Tips:** Android 源码非常庞大，直接采用 grep 来搜索代码，不仅方法笨拙、浪费时间，而且搜索出很多无意义的混淆结果。根据具体需求，来选择合适的代码搜索指令，能节省代码搜索时间，提高搜索结果的精准度，方便定位目标代码。
 
@@ -182,8 +182,8 @@ Android 编译系统是 Android 源码的一部分，用于编译 Android 系统
 
 对于 Android.mk 文件，通常都是以下面两行
 ```shell
-    LOCAL_PATH := $(call my-dir)  // 设置当编译路径为当前文件夹所在路径
-    include $(CLEAR_VARS)  // 清空编译环境的变量（由其他模块设置过的变量）
+LOCAL_PATH := $(call my-dir)  // 设置当编译路径为当前文件夹所在路径
+include $(CLEAR_VARS)  // 清空编译环境的变量（由其他模块设置过的变量）
 ```
 为方便模块编译，编译系统设置了很多的编译环境变量，如下：
 
@@ -208,18 +208,18 @@ Android 编译系统是 Android 源码的一部分，用于编译 Android 系统
 
 示例：
 ```shell
-      LOCAL_PATH := $(call my-dir)
-      include $(CLEAR_VARS)
+LOCAL_PATH := $(call my-dir)
+include $(CLEAR_VARS)
 
-      # 获取所有子目录中的 Java 文件
-      LOCAL_SRC_FILES := $(call all-subdir-java-files)
+# 获取所有子目录中的 Java 文件
+LOCAL_SRC_FILES := $(call all-subdir-java-files)
 
-      # 当前模块依赖的动态 Java 库名称
-      LOCAL_JAVA_LIBRARIES := com.gityuan.lib
+# 当前模块依赖的动态 Java 库名称
+LOCAL_JAVA_LIBRARIES := com.gityuan.lib
 
-      # 当前模块的名称
-      LOCAL_MODULE := demo
+# 当前模块的名称
+LOCAL_MODULE := demo
 
-      # 将当前模块编译成一个静态的 Java 库
-      include $(BUILD_STATIC_JAVA_LIBRARY)
+# 将当前模块编译成一个静态的 Java 库
+include $(BUILD_STATIC_JAVA_LIBRARY)
 ```
