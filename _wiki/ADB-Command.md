@@ -1,4 +1,5 @@
 ---
+layout:     wiki
 title:      "ADB常用命令"
 subtitle:   "一些常用的 ADB 命令"
 date:       2019-01-07 17:27:32
