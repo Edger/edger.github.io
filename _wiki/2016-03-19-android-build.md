@@ -1,6 +1,6 @@
 ---
-layout:     post
 title:      "理解 Android 编译命令"
+subtitle:   "Android 编译系统常用命令"
 date:       2016-03-19 21:19:12
 author:     "Gityuan"
 header-img: "img/post-bg-C++-learnin.jpg"
