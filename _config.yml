@@ -82,7 +82,7 @@ netease_comment: false
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "其犹龙乎，卜他年鲤化蛟腾，尽洗蛮烟蜑雨。"
+sidebar-about-description: "知行合一，止于至善"
 sidebar-avatar: /img/avatar.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
