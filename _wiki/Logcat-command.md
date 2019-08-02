@@ -39,7 +39,7 @@ adb logcat '*:V' --pid=`adb shell pidof -s <package_name>` -v color -v time | gr
 
 ##### 在 Android Studio 中使用过滤器过滤不需要的 log，如下：
 
-![Android Studio Logcat 过滤器](img/in-post/WIKI-Logcat-Command-Android-Studio-Filter.png)
+![Android Studio Logcat 过滤器](/img/in-post/WIKI-Logcat-Command-Android-Studio-Filter.png)
 
 在 Android Studio 过滤器中过滤字符串的正则表达式如下：
 
