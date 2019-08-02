@@ -36,3 +36,16 @@ adb logcat '*:V' --pid=`adb shell pidof -s <package_name>` -v color -v time | gr
 ```bash
 adb logcat '*:V' --pid=`adb shell pidof -s <package_name>` -v color -v time | grep -vE "<str>" --color=auto
 ```
+
+##### 在 Android Studio 中使用过滤器过滤不需要的 log，如下：
+
+![Android Studio Logcat 过滤器](img/in-post/WIKI-Logcat-Command-Android-Studio-Filter.png)
+
+在 Android Studio 过滤器中过滤字符串的正则表达式如下：
+
+- 查找不以 `baidu` 开头的字符串：`^(?!baidu).*$`
+- 查找不以 `com` 结尾的字符串：`^.*?(?<!com)$`
+- 查找不含有 `baidu` 的字符串：`^(?!.*baidu).*$`
+
+具体可以参考  [**利用正则表达式排除特定字符串**](https://www.cnblogs.com/wangqiguo/archive/2012/05/08/2486548.html) 这篇博客。
+
