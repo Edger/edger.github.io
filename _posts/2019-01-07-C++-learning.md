@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      "C++ 学习笔记"
-subtitle:   "学习 C++ 时做的一些笔记"
+title:      "C++ 学习笔记 "
+subtitle:   " 学习 C++ 时做的一些笔记 "
 date:       2019-01-07 17:27:32
 author:     "Edger"
 header-img: "img/post-bg-C++-learnin.jpg"
@@ -16,7 +16,7 @@ tags:
 
 主要是为了避免命名冲突，但是不宜因噎废食。
 
-详见[【知乎】为什么尽量不要使用 using namespace std？](https://www.zhihu.com/question/26911239)
+详见 [【知乎】为什么尽量不要使用 using namespace std？](https://www.zhihu.com/question/26911239)
 
 #### 2. #include <> 和 #include \"\" 的区别
 
@@ -70,16 +70,16 @@ tags:
 定义包含了声明，但是声明不包含定义，如
 
 ```cpp
-int a = 0;     //定义并声明了变量 a
-extern int a;  //只是声明了有一个变量 a 存在，具体 a 在哪定义的，需要编译器编译的时候去找。
+int a = 0;     // 定义并声明了变量 a
+extern int a;  // 只是声明了有一个变量 a 存在，具体 a 在哪定义的，需要编译器编译的时候去找。
 ```
 
 函数也是类似，定义的时候同时声明。但如果只是声明，编译器只知道有这么个函数，具体函数怎么定义的要编译器去找。
 
 ```cpp
-void fun1();  //函数声明
+void fun1();  // 函数声明
 
-void fun1()   //函数定义
+void fun1()   // 函数定义
 {  
     cout << "fun1" << endl;
 }
@@ -99,17 +99,17 @@ int main()
         return false;
     }
     
-    if (NULL = a) // !!!!ERROR  此处在程序编译阶段不通过，“=”右边不能为变量名
+    if (NULL = a) // !!!!ERROR  此处在程序编译阶段不通过，“=” 右边不能为变量名
     {
         return false;
     }
     
-    if (a == NULL) // 可行，判断指针a是否为空
+    if (a == NULL) // 可行，判断指针 a 是否为空
     {
         return false;
     }
     
-    if (NULL == a) // 可行，判断指针a是否为空。在实际项目中，
+    if (NULL == a) // 可行，判断指针 a 是否为空。在实际项目中，
                    // 为了防止将 “==” 误写作 “=” 推荐讲变量名写在右侧，
                    // 编译器可以帮助寻找错误
     {
@@ -120,6 +120,6 @@ int main()
 
 }
 ```
-#### 8. 前++和后++总结
+#### 8. 前 ++ 和后 ++ 总结
 
-前++是先自加再使用，而后++是先使用再自加！
+前 ++ 是先自加再使用，而后 ++ 是先使用再自加！
