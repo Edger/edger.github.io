@@ -40,7 +40,7 @@ adb remount
 #### 获得当前活动窗口的信息，包名以及活动窗体：
 
 ```shell
-adb shell dumpsys window windows | grep mCurrent**
+adb shell dumpsys window windows | grep mCurrent
 ```
 
 #### 杀死进程
@@ -59,7 +59,7 @@ am force-stop <package_name>
 
 ```shell
 adb shell ps
-```    
+```
 
 #### 查看 package_name 程序进程
 
@@ -71,7 +71,7 @@ adb shell ps | grep <package_name>
 
 ```shell
 adb shell ps -x [PID]
-```     
+```
 
 #### 实时监听程序进程的变化
 
