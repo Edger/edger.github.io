@@ -27,7 +27,10 @@ tags:
 
 ```bash
 adb logcat '*:V' -v color -v time | grep `adb shell ps | grep <package_name> | cut -c11-14`
+```
+或
 
+```bash
 adb logcat '*:V' --pid=`adb shell ps | grep <package_name> | cut -c11-14` -v color -v time
 ```
 PS: `cut -c11-14` 需要按情况修改，因为通过 `PS` 命令获取到的 `PID` 在字符串中的列数不一定是这个
