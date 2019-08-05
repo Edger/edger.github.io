@@ -12,7 +12,19 @@ tags:
     - Logcat
 ---
 
+
+
+做 Android 开发，尤其是 Android 应用开发，我们在调试的时候，抓 log 是必不可少的。一般我们可以通过 `adb` 或者 Android Studio 的 `Logcat` 来抓取 log 。调试应用的时候，我们往往只需要抓取该应用的相关 log ，其他系统或者应用的 log 则可以过滤掉。
+
+这就引出了一个问题，如何只抓取特定应用的 log？如果使用 Android Studio 的话，这是比较好做到的，只需要配置一下自带的 Logcat 就好，本文最后会介绍。但是如果需要用 adb 命令来实现这一操作呢？我发现网上很少文章介绍到这一操作，基本上都是一些介绍 `adb logcat` 基本命令的。不知道大家是不是都是直接使用 
+`adb logcat | grep <str>` 这样的命令来抓 log 的，反正我觉得这样抓的话，要不就不是很全，因为有时候我需要看这个应用从头到尾的 log 去了解整个流程，要不就带有其他不相关的 log ，影响查看。
+
+所以，为了能够抓取指定应用的相关 log ，我特地研究了一下 logcat 的相关用法并 Google 了一下相关的资料，最后整理如下。
+
+
+
 ##### 抓取特定应用的 log
+
 ```bash
 adb logcat '*:V' -v color -v time | grep `adb shell ps | grep <package_name> | cut -c11-14`
 
