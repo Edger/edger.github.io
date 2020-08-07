@@ -1,3 +1,5 @@
+![Anurag’s github stats](https://github-readme-stats.vercel.app/api?username=Edger&show_icons=true&theme=merko)
+
 # Edger's Blog
 
 这是我的个人博客仓库。
